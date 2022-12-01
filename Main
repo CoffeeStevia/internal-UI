@@ -1,0 +1,173 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Main = Instance.new("Frame")
+local ScrollingFrame = Instance.new("ScrollingFrame")
+local Source = Instance.new("TextBox")
+local clear = Instance.new("TextButton")
+local exec = Instance.new("TextButton")
+local TextLabel = Instance.new("TextLabel")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ResetOnSpawn = false
+
+Main.Name = "Main"
+Main.Parent = ScreenGui
+Main.BackgroundColor3 = Color3.fromRGB(14, 14, 14)
+Main.BorderColor3 = Color3.fromRGB(14, 14, 14)
+Main.Position = UDim2.new(0, 12, 0, 59)
+Main.Size = UDim2.new(0, 439, 0, 280)
+
+ScrollingFrame.Parent = Main
+ScrollingFrame.Active = true
+ScrollingFrame.BackgroundColor3 = Color3.fromRGB(14, 14, 14)
+ScrollingFrame.BorderColor3 = Color3.fromRGB(14, 14, 14)
+ScrollingFrame.Position = UDim2.new(0.016375497, 0, 0.10357143, 0)
+ScrollingFrame.Size = UDim2.new(0, 421, 0, 211)
+ScrollingFrame.CanvasSize = UDim2.new(10, 0, 10, 0)
+ScrollingFrame.HorizontalScrollBarInset = Enum.ScrollBarInset.Always
+ScrollingFrame.VerticalScrollBarInset = Enum.ScrollBarInset.Always
+
+Source.Name = "Source"
+Source.Parent = ScrollingFrame
+Source.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
+Source.BorderColor3 = Color3.fromRGB(22, 22, 22)
+Source.Size = UDim2.new(10, 0, 2, 0)
+Source.ClearTextOnFocus = false
+Source.Font = Enum.Font.Roboto
+Source.MultiLine = true
+Source.PlaceholderColor3 = Color3.fromRGB(255, 255, 255)
+Source.PlaceholderText = "--Insert Scripts Here"
+Source.Text = ""
+Source.TextColor3 = Color3.fromRGB(255, 255, 255)
+Source.TextSize = 17.000
+Source.TextWrapped = true
+Source.TextXAlignment = Enum.TextXAlignment.Left
+Source.TextYAlignment = Enum.TextYAlignment.Top
+
+clear.Name = "clear"
+clear.Parent = Main
+clear.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
+clear.BorderColor3 = Color3.fromRGB(14, 14, 14)
+clear.Position = UDim2.new(0, 110, 0, 243)
+clear.Size = UDim2.new(0, 110, 0, 31)
+clear.Font = Enum.Font.Roboto
+clear.Text = "Clear"
+clear.TextColor3 = Color3.fromRGB(255, 255, 255)
+clear.TextSize = 25.000
+clear.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+clear.TextWrapped = true
+
+exec.Name = "exec"
+exec.Parent = Main
+exec.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
+exec.BorderColor3 = Color3.fromRGB(14, 14, 14)
+exec.Position = UDim2.new(0, 8, 0, 243)
+exec.Size = UDim2.new(0, 93, 0, 31)
+exec.Font = Enum.Font.Roboto
+exec.Text = "Execute"
+exec.TextColor3 = Color3.fromRGB(255, 255, 255)
+exec.TextSize = 25.000
+exec.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+exec.TextWrapped = true
+
+TextLabel.Parent = Main
+TextLabel.BackgroundColor3 = Color3.fromRGB(14, 14, 14)
+TextLabel.BorderColor3 = Color3.fromRGB(14, 14, 14)
+TextLabel.Position = UDim2.new(0, 8, 0, 7)
+TextLabel.Size = UDim2.new(0, 102, 0, 22)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "Splice Internal"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+-- Scripts:
+
+local function PUBIX_fake_script() -- clear.Script 
+	local script = Instance.new('Script', clear)
+
+	clear.MouseButton1Click:Connect(function()
+		Source.Text = ""
+	end)
+end
+coroutine.wrap(PUBIX_fake_script)()
+local function GSDJZS_fake_script() -- exec.Script 
+	local script = Instance.new('Script', exec)
+
+	exec.MouseButton1Click:Connect(function()
+		assert(loadstring(Source.Text))()
+	end)
+end
+coroutine.wrap(GSDJZS_fake_script)()
+local function FMGBRAJ_fake_script() -- Main.LocalScript 
+	local script = Instance.new('LocalScript', Main)
+
+	
+	local UIS = game:GetService("UserInputService")
+	function dragify(Frame)
+		dragToggle = nil
+		dragSpeed = 0.15
+		dragInput = nil
+		dragStart = nil
+		dragPos = nil
+		function updateInput(input)
+			Delta = input.Position - dragStart
+			Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
+			game:GetService("TweenService"):Create(Frame, TweenInfo.new(0.15), {Position = Position}):Play()
+		end
+		Frame.InputBegan:Connect(function(input)
+			if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and UIS:GetFocusedTextBox() == nil then
+				dragToggle = true
+				dragStart = input.Position
+				startPos = Frame.Position
+				input.Changed:Connect(function()
+					if input.UserInputState == Enum.UserInputState.End then
+						dragToggle = false
+					end
+				end)
+			end
+		end)
+		Frame.InputChanged:Connect(function(input)
+			if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+				dragInput = input
+			end
+		end)
+		game:GetService("UserInputService").InputChanged:Connect(function(input)
+			if input == dragInput and dragToggle then
+				updateInput(input)
+			end
+		end)
+	end
+	dragify(script.Parent)
+	
+end
+coroutine.wrap(FMGBRAJ_fake_script)()
+local function ZBSKD_fake_script() -- ScreenGui.Script 
+	local script = Instance.new('Script', ScreenGui)
+
+	
+	local Plr = game.Players.LocalPlayer
+	
+	Plr:GetMouse().KeyDown:Connect(function(K)
+		if K == "=" then
+			Main.Visible = true
+		end
+	end)
+	
+	local Plr = game.Players.LocalPlayer
+	
+	Plr:GetMouse().KeyDown:Connect(function(K)
+		if K == "-" then
+			Main.Visible = false
+		end
+	end)
+	
+end
+coroutine.wrap(ZBSKD_fake_script)()
