@@ -172,7 +172,7 @@ NotificationBindable.OnInvoke = callback
 --
 game.StarterGui:SetCore("SendNotification",  {
  Title = "Credits: Coffee#1306 UI/Code";
- Text = "Other: Fishy#4864 - some code";
+ Text = "Other: fishy#4864 - some code";
  Icon = "";
  Duration = 10;
  Button1 = "Ok";
