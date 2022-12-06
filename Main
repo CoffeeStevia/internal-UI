@@ -1,8 +1,3 @@
--- Gui to Lua
--- Version: 3.2
-
--- Instances:
-
 local ScreenGui = Instance.new("ScreenGui")
 local Main = Instance.new("Frame")
 local ScrollingFrame = Instance.new("ScrollingFrame")
@@ -13,7 +8,7 @@ local TextLabel = Instance.new("TextLabel")
 
 --Properties:
 
-ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.Parent = game:GetService("CoreGui")
 ScreenGui.ResetOnSpawn = false
 
 Main.Name = "Main"
@@ -103,6 +98,7 @@ local function GSDJZS_fake_script() -- exec.Script
 
 	exec.MouseButton1Click:Connect(function()
 		assert(loadstring(Source.Text))()
+		print("Executed!")
 	end)
 end
 coroutine.wrap(GSDJZS_fake_script)()
@@ -170,4 +166,16 @@ local function ZBSKD_fake_script() -- ScreenGui.Script
 	end)
 	
 end
+
+local NotificationBindable = Instance.new("BindableFunction")
+NotificationBindable.OnInvoke = callback
+--
+game.StarterGui:SetCore("SendNotification",  {
+ Title = "Credits: Coffee#1306 UI/Code";
+ Text = "Other: Fishy#4864 - some code";
+ Icon = "";
+ Duration = 10;
+ Button1 = "Ok";
+ Callback = NotificationBindable;
+})
 coroutine.wrap(ZBSKD_fake_script)()
