@@ -2,9 +2,16 @@ local ScreenGui = Instance.new("ScreenGui")
 local Main = Instance.new("Frame")
 local ScrollingFrame = Instance.new("ScrollingFrame")
 local Source = Instance.new("TextBox")
+local UICorner = Instance.new("UICorner")
+local UICorner_2 = Instance.new("UICorner")
 local clear = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
 local exec = Instance.new("TextButton")
+local UICorner_4 = Instance.new("UICorner")
 local TextLabel = Instance.new("TextLabel")
+local HideText = Instance.new("TextButton")
+local UICorner_5 = Instance.new("UICorner")
+local UICorner_6 = Instance.new("UICorner")
 
 --Properties:
 
@@ -15,15 +22,15 @@ Main.Name = "Main"
 Main.Parent = ScreenGui
 Main.BackgroundColor3 = Color3.fromRGB(14, 14, 14)
 Main.BorderColor3 = Color3.fromRGB(14, 14, 14)
-Main.Position = UDim2.new(0, 12, 0, 59)
-Main.Size = UDim2.new(0, 439, 0, 280)
+Main.Position = UDim2.new(0, 4, 0, 6)
+Main.Size = UDim2.new(0, 679, 0, 279)
 
 ScrollingFrame.Parent = Main
 ScrollingFrame.Active = true
 ScrollingFrame.BackgroundColor3 = Color3.fromRGB(14, 14, 14)
 ScrollingFrame.BorderColor3 = Color3.fromRGB(14, 14, 14)
-ScrollingFrame.Position = UDim2.new(0.016375497, 0, 0.10357143, 0)
-ScrollingFrame.Size = UDim2.new(0, 421, 0, 211)
+ScrollingFrame.Position = UDim2.new(0.0163754895, 0, 0.103571452, 0)
+ScrollingFrame.Size = UDim2.new(0, 661, 0, 211)
 ScrollingFrame.CanvasSize = UDim2.new(10, 0, 10, 0)
 ScrollingFrame.HorizontalScrollBarInset = Enum.ScrollBarInset.Always
 ScrollingFrame.VerticalScrollBarInset = Enum.ScrollBarInset.Always
@@ -41,9 +48,12 @@ Source.PlaceholderText = "--Insert Scripts Here"
 Source.Text = ""
 Source.TextColor3 = Color3.fromRGB(255, 255, 255)
 Source.TextSize = 17.000
-Source.TextWrapped = true
 Source.TextXAlignment = Enum.TextXAlignment.Left
 Source.TextYAlignment = Enum.TextYAlignment.Top
+
+UICorner.Parent = Source
+
+UICorner_2.Parent = ScrollingFrame
 
 clear.Name = "clear"
 clear.Parent = Main
@@ -58,6 +68,8 @@ clear.TextSize = 25.000
 clear.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
 clear.TextWrapped = true
 
+UICorner_3.Parent = clear
+
 exec.Name = "exec"
 exec.Parent = Main
 exec.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
@@ -71,6 +83,8 @@ exec.TextSize = 25.000
 exec.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
 exec.TextWrapped = true
 
+UICorner_4.Parent = exec
+
 TextLabel.Parent = Main
 TextLabel.BackgroundColor3 = Color3.fromRGB(14, 14, 14)
 TextLabel.BorderColor3 = Color3.fromRGB(14, 14, 14)
@@ -83,26 +97,44 @@ TextLabel.TextScaled = true
 TextLabel.TextSize = 14.000
 TextLabel.TextWrapped = true
 
+HideText.Name = "HideText"
+HideText.Parent = Main
+HideText.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
+HideText.BorderColor3 = Color3.fromRGB(14, 14, 14)
+HideText.Position = UDim2.new(0, 228, 0, 243)
+HideText.Size = UDim2.new(0, 110, 0, 31)
+HideText.Font = Enum.Font.Roboto
+HideText.Text = "Hide Text"
+HideText.TextColor3 = Color3.fromRGB(255, 255, 255)
+HideText.TextSize = 25.000
+HideText.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+HideText.TextWrapped = true
+
+UICorner_5.Parent = HideText
+
+UICorner_6.Parent = Main
+
 -- Scripts:
 
-local function PUBIX_fake_script() -- clear.Script 
+local function XGQMJB_fake_script() -- clear.Script 
 	local script = Instance.new('Script', clear)
 
 	clear.MouseButton1Click:Connect(function()
+		Source.Text = "--Cleared"
+		wait(2)
 		Source.Text = ""
 	end)
 end
-coroutine.wrap(PUBIX_fake_script)()
-local function GSDJZS_fake_script() -- exec.Script 
+coroutine.wrap(XGQMJB_fake_script)()
+local function XDPMX_fake_script() -- exec.Script 
 	local script = Instance.new('Script', exec)
 
 	exec.MouseButton1Click:Connect(function()
 		assert(loadstring(Source.Text))()
-		print("Executed!")
 	end)
 end
-coroutine.wrap(GSDJZS_fake_script)()
-local function FMGBRAJ_fake_script() -- Main.LocalScript 
+coroutine.wrap(XDPMX_fake_script)()
+local function UMRKQH_fake_script() -- Main.LocalScript 
 	local script = Instance.new('LocalScript', Main)
 
 	
@@ -144,11 +176,73 @@ local function FMGBRAJ_fake_script() -- Main.LocalScript
 	dragify(script.Parent)
 	
 end
-coroutine.wrap(FMGBRAJ_fake_script)()
-local function ZBSKD_fake_script() -- ScreenGui.Script 
+coroutine.wrap(UMRKQH_fake_script)()
+local function LWLCDO_fake_script() -- HideText.Script 
+	local script = Instance.new('Script', HideText)
+
+	local hidden = false
+	script.Parent.MouseButton1Click:Connect(function()
+		if hidden == false then
+	
+	
+			-- Change script.Parent.Parent.Frame1.TextBox to wherever your textbox is,
+			-- It could be script.Parent.Mainframe.Codebox.TextBox
+			-- Change it to wherever your textbox is...
+			-- Don't forget to subscribe to scrambles! :D
+	
+			script.Parent.Parent.ScriptBox.Transparency = 0.1
+			wait()
+			script.Parent.Parent.ScriptBox.Transparency = 0.2
+			wait()
+			script.Parent.Parent.ScriptBox.Transparency = 0.3
+			wait()
+			script.Parent.Parent.ScriptBox.Transparency = 0.4
+			wait()
+			script.Parent.Parent.ScriptBox.Transparency = 0.5
+			wait()
+			script.Parent.Parent.ScriptBox.Transparency = 0.6
+			wait()
+			script.Parent.Parent.ScriptBox.Transparency = 0.7
+			wait()
+			script.Parent.Parent.ScriptBox.Transparency = 0.8
+			wait()
+			script.Parent.Parent.ScriptBox.Transparency = 0.9
+			wait()
+			script.Parent.Parent.ScriptBox.Transparency = 1
+			wait()
+			hidden = true
+		else
+			hidden = false
+			script.Parent.Parent.ScriptBox.Transparency = 1
+			wait()
+			script.Parent.Parent.ScriptBox.Transparency = 0.9
+			wait()
+			script.Parent.Parent.ScriptBox.Transparency = 0.8
+			wait()
+			script.Parent.Parent.ScriptBox.Transparency = 0.7
+			wait()
+			script.Parent.Parent.ScriptBox.Transparency = 0.6
+			wait()
+			script.Parent.Parent.ScriptBox.Transparency = 0.5
+			wait()
+			script.Parent.Parent.ScriptBox.Transparency = 0.4
+			wait()
+			script.Parent.Parent.ScriptBox.Transparency = 0.3
+			wait()
+			script.Parent.Parent.ScriptBox.Transparency = 0.2
+			wait()
+			script.Parent.Parent.ScriptBox.Transparency = 0.1
+			wait()
+			script.Parent.Parent.ScriptBox.Transparency = 0
+			wait()
+		end	
+	end)
+	
+end
+coroutine.wrap(LWLCDO_fake_script)()
+local function BSTOHI_fake_script() -- ScreenGui.Script 
 	local script = Instance.new('Script', ScreenGui)
 
-	
 	local Plr = game.Players.LocalPlayer
 	
 	Plr:GetMouse().KeyDown:Connect(function(K)
@@ -178,4 +272,4 @@ game.StarterGui:SetCore("SendNotification",  {
  Button1 = "Ok";
  Callback = NotificationBindable;
 })
-coroutine.wrap(ZBSKD_fake_script)()
+coroutine.wrap(BSTOHI_fake_script)()
