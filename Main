@@ -41,7 +41,7 @@ local UICorner_16 = Instance.new("UICorner")
 --Properties:
 
 InternalV2.Name = "Internal V2"
-InternalV2.Parent = game:GetService("CoreGui")
+InternalV2.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 InternalV2.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 Main.Name = "Main"
@@ -77,6 +77,7 @@ Scripts.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
 Scripts.BorderColor3 = Color3.fromRGB(14, 14, 14)
 Scripts.Position = UDim2.new(0.134955749, 0, 0, 0)
 Scripts.Size = UDim2.new(0, 391, 0, 237)
+Scripts.Visible = false
 
 UICorner_4.Parent = Scripts
 
@@ -203,7 +204,6 @@ HomeTab.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
 HomeTab.BorderColor3 = Color3.fromRGB(22, 22, 22)
 HomeTab.Position = UDim2.new(0.134955749, 0, 0, 0)
 HomeTab.Size = UDim2.new(0, 391, 0, 237)
-HomeTab.Visible = false
 
 UICorner_15.Parent = HomeTab
 
@@ -234,7 +234,7 @@ UICorner_16.Parent = TextButton
 
 -- Scripts:
 
-local function MPEP_fake_script() -- ScriptHub.LocalScript 
+local function JFTV_fake_script() -- ScriptHub.LocalScript 
 	local script = Instance.new('LocalScript', ScriptHub)
 
 	script.Parent.MouseButton1Down:Connect(function()
@@ -243,8 +243,8 @@ local function MPEP_fake_script() -- ScriptHub.LocalScript
 		script.Parent.Parent.HomeTab.Visible = false
 	end)
 end
-coroutine.wrap(MPEP_fake_script)()
-local function HETZS_fake_script() -- ExecutorTab.LocalScript 
+coroutine.wrap(JFTV_fake_script)()
+local function UXGDEPK_fake_script() -- ExecutorTab.LocalScript 
 	local script = Instance.new('LocalScript', ExecutorTab)
 
 	script.Parent.MouseButton1Down:Connect(function()
@@ -253,8 +253,8 @@ local function HETZS_fake_script() -- ExecutorTab.LocalScript
 		script.Parent.Parent.HomeTab.Visible = false
 	end)
 end
-coroutine.wrap(HETZS_fake_script)()
-local function RIUJM_fake_script() -- Void.LocalScript 
+coroutine.wrap(UXGDEPK_fake_script)()
+local function PBOUXG_fake_script() -- Void.LocalScript 
 	local script = Instance.new('LocalScript', Void)
 
 	script.Parent.MouseButton1Down:Connect(function()
@@ -265,8 +265,8 @@ local function RIUJM_fake_script() -- Void.LocalScript
 	end)
 	
 end
-coroutine.wrap(RIUJM_fake_script)()
-local function TGXCDJ_fake_script() -- DarkHub.LocalScript 
+coroutine.wrap(PBOUXG_fake_script)()
+local function KUJBT_fake_script() -- DarkHub.LocalScript 
 	local script = Instance.new('LocalScript', DarkHub)
 
 	script.Parent.MouseButton1Down:Connect(function()
@@ -276,8 +276,8 @@ local function TGXCDJ_fake_script() -- DarkHub.LocalScript
 		script.Parent.Text = "Dark Hub"
 	end)
 end
-coroutine.wrap(TGXCDJ_fake_script)()
-local function GAGB_fake_script() -- CombatWarriors.LocalScript 
+coroutine.wrap(KUJBT_fake_script)()
+local function LTCORQ_fake_script() -- CombatWarriors.LocalScript 
 	local script = Instance.new('LocalScript', CombatWarriors)
 
 	script.Parent.MouseButton1Down:Connect(function()
@@ -287,8 +287,8 @@ local function GAGB_fake_script() -- CombatWarriors.LocalScript
 		script.Parent.Text = "Combat Warriors"
 	end)
 end
-coroutine.wrap(GAGB_fake_script)()
-local function SPOL_fake_script() -- SwagMode.LocalScript 
+coroutine.wrap(LTCORQ_fake_script)()
+local function ZVIGN_fake_script() -- SwagMode.LocalScript 
 	local script = Instance.new('LocalScript', SwagMode)
 
 	script.Parent.MouseButton1Down:Connect(function()
@@ -298,24 +298,24 @@ local function SPOL_fake_script() -- SwagMode.LocalScript
 		script.Parent.Text = "Swag Mode"
 	end)
 end
-coroutine.wrap(SPOL_fake_script)()
-local function EPKBAV_fake_script() -- exec.Script 
+coroutine.wrap(ZVIGN_fake_script)()
+local function NIFDKOS_fake_script() -- exec.Script 
 	local script = Instance.new('Script', exec)
 
 	exec.MouseButton1Click:Connect(function()
 		assert(loadstring(Source.Text))()
 	end)
 end
-coroutine.wrap(EPKBAV_fake_script)()
-local function FITCI_fake_script() -- clear.Script 
+coroutine.wrap(NIFDKOS_fake_script)()
+local function KCMYV_fake_script() -- clear.Script 
 	local script = Instance.new('Script', clear)
 
 	clear.MouseButton1Click:Connect(function()
 		Source.Text = ""
 	end)
 end
-coroutine.wrap(FITCI_fake_script)()
-local function BKKBSNU_fake_script() -- Home.LocalScript 
+coroutine.wrap(KCMYV_fake_script)()
+local function VEEHNCM_fake_script() -- Home.LocalScript 
 	local script = Instance.new('LocalScript', Home)
 
 	script.Parent.MouseButton1Down:Connect(function()
@@ -324,8 +324,8 @@ local function BKKBSNU_fake_script() -- Home.LocalScript
 		script.Parent.Parent.HomeTab.Visible = true
 	end)
 end
-coroutine.wrap(BKKBSNU_fake_script)()
-local function RNOPDOE_fake_script() -- TextButton.LocalScript 
+coroutine.wrap(VEEHNCM_fake_script)()
+local function KTUCXY_fake_script() -- TextButton.LocalScript 
 	local script = Instance.new('LocalScript', TextButton)
 
 	script.Parent.MouseButton1Down:Connect(function()
@@ -344,8 +344,8 @@ local function RNOPDOE_fake_script() -- TextButton.LocalScript
 		setclipboard("https://discord.gg/dACJYTDU27")
 	end)
 end
-coroutine.wrap(RNOPDOE_fake_script)()
-local function CDDHNEA_fake_script() -- Main.Dragify 
+coroutine.wrap(KTUCXY_fake_script)()
+local function JELCKWY_fake_script() -- Main.Dragify 
 	local script = Instance.new('LocalScript', Main)
 
 	local UIS = game:GetService("UserInputService")
@@ -386,8 +386,8 @@ local function CDDHNEA_fake_script() -- Main.Dragify
 	dragify(script.Parent)
 	
 end
-coroutine.wrap(CDDHNEA_fake_script)()
-local function BDSNIGS_fake_script() -- Main.KeyBind 
+coroutine.wrap(JELCKWY_fake_script)()
+local function UWQJFZ_fake_script() -- Main.KeyBind 
 	local script = Instance.new('LocalScript', Main)
 
 	local Mainframe = script.Parent.Parent.Main
@@ -410,4 +410,4 @@ local function BDSNIGS_fake_script() -- Main.KeyBind
 		end
 	end)
 end
-coroutine.wrap(BDSNIGS_fake_script)()
+coroutine.wrap(UWQJFZ_fake_script)()
