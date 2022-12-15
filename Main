@@ -1,143 +1,353 @@
-local ScreenGui = Instance.new("ScreenGui")
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local InternalV2 = Instance.new("ScreenGui")
 local Main = Instance.new("Frame")
+local ScriptHub = Instance.new("ImageButton")
+local UICorner = Instance.new("UICorner")
+local ExecutorTab = Instance.new("ImageButton")
+local UICorner_2 = Instance.new("UICorner")
+local UICorner_3 = Instance.new("UICorner")
+local Scripts = Instance.new("Frame")
+local UICorner_4 = Instance.new("UICorner")
+local Void = Instance.new("TextButton")
+local UICorner_5 = Instance.new("UICorner")
+local DarkHub = Instance.new("TextButton")
+local UICorner_6 = Instance.new("UICorner")
+local CombatWarriors = Instance.new("TextButton")
+local UICorner_7 = Instance.new("UICorner")
+local SwagMode = Instance.new("TextButton")
+local UICorner_8 = Instance.new("UICorner")
+local Executor = Instance.new("Frame")
+local UICorner_9 = Instance.new("UICorner")
+local exec = Instance.new("ImageButton")
+local UICorner_10 = Instance.new("UICorner")
+local clear = Instance.new("ImageButton")
+local UICorner_11 = Instance.new("UICorner")
 local ScrollingFrame = Instance.new("ScrollingFrame")
 local Source = Instance.new("TextBox")
-local UICorner = Instance.new("UICorner")
-local UICorner_2 = Instance.new("UICorner")
-local clear = Instance.new("TextButton")
-local UICorner_3 = Instance.new("UICorner")
-local exec = Instance.new("TextButton")
-local UICorner_4 = Instance.new("UICorner")
-local TextLabel = Instance.new("TextLabel")
-local HideText = Instance.new("TextButton")
-local UICorner_5 = Instance.new("UICorner")
-local UICorner_6 = Instance.new("UICorner")
+local UICorner_12 = Instance.new("UICorner")
+local UICorner_13 = Instance.new("UICorner")
+local Home = Instance.new("ImageButton")
+local UICorner_14 = Instance.new("UICorner")
+local HomeTab = Instance.new("Frame")
+local UICorner_15 = Instance.new("UICorner")
+local Title = Instance.new("TextLabel")
+local TextButton = Instance.new("TextButton")
+local UICorner_16 = Instance.new("UICorner")
 
 --Properties:
 
-ScreenGui.Parent = game:GetService("CoreGui")
-ScreenGui.ResetOnSpawn = false
+InternalV2.Name = "Internal V2"
+InternalV2.Parent = game:GetService("CoreGui")
+InternalV2.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 Main.Name = "Main"
-Main.Parent = ScreenGui
+Main.Parent = InternalV2
 Main.BackgroundColor3 = Color3.fromRGB(14, 14, 14)
-Main.BorderColor3 = Color3.fromRGB(14, 14, 14)
-Main.Position = UDim2.new(0, 4, 0, 6)
-Main.Size = UDim2.new(0, 679, 0, 279)
+Main.Position = UDim2.new(0.0301557407, 0, 0.265748024, 0)
+Main.Size = UDim2.new(0, 452, 0, 237)
 
-ScrollingFrame.Parent = Main
+ScriptHub.Name = "ScriptHub"
+ScriptHub.Parent = Main
+ScriptHub.BackgroundColor3 = Color3.fromRGB(14, 14, 14)
+ScriptHub.BorderColor3 = Color3.fromRGB(14, 14, 14)
+ScriptHub.Size = UDim2.new(0, 61, 0, 56)
+ScriptHub.Image = "http://www.roblox.com/asset/?id=11570895459"
+
+UICorner.Parent = ScriptHub
+
+ExecutorTab.Name = "ExecutorTab"
+ExecutorTab.Parent = Main
+ExecutorTab.BackgroundColor3 = Color3.fromRGB(14, 14, 14)
+ExecutorTab.BorderColor3 = Color3.fromRGB(14, 14, 14)
+ExecutorTab.Position = UDim2.new(0, 0, 0.236286923, 0)
+ExecutorTab.Size = UDim2.new(0, 61, 0, 58)
+ExecutorTab.Image = "http://www.roblox.com/asset/?id=5970247016"
+
+UICorner_2.Parent = ExecutorTab
+
+UICorner_3.Parent = Main
+
+Scripts.Name = "Scripts"
+Scripts.Parent = Main
+Scripts.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
+Scripts.BorderColor3 = Color3.fromRGB(14, 14, 14)
+Scripts.Position = UDim2.new(0.134955749, 0, 0, 0)
+Scripts.Size = UDim2.new(0, 391, 0, 237)
+
+UICorner_4.Parent = Scripts
+
+Void.Name = "Void"
+Void.Parent = Scripts
+Void.BackgroundColor3 = Color3.fromRGB(33, 33, 33)
+Void.BorderColor3 = Color3.fromRGB(33, 33, 33)
+Void.Position = UDim2.new(0.0179028139, 0, 0.0379746854, 0)
+Void.Size = UDim2.new(0, 105, 0, 37)
+Void.Font = Enum.Font.SourceSans
+Void.Text = "Void Hub"
+Void.TextColor3 = Color3.fromRGB(255, 255, 255)
+Void.TextSize = 14.000
+
+UICorner_5.Parent = Void
+
+DarkHub.Name = "DarkHub"
+DarkHub.Parent = Scripts
+DarkHub.BackgroundColor3 = Color3.fromRGB(33, 33, 33)
+DarkHub.Position = UDim2.new(0.0179028139, 0, 0.236286938, 0)
+DarkHub.Size = UDim2.new(0, 105, 0, 37)
+DarkHub.Font = Enum.Font.SourceSans
+DarkHub.Text = "Dark Hub"
+DarkHub.TextColor3 = Color3.fromRGB(255, 255, 255)
+DarkHub.TextSize = 14.000
+
+UICorner_6.Parent = DarkHub
+
+CombatWarriors.Name = "Combat  Warriors"
+CombatWarriors.Parent = Scripts
+CombatWarriors.BackgroundColor3 = Color3.fromRGB(33, 33, 33)
+CombatWarriors.Position = UDim2.new(0.0179028139, 0, 0.421940953, 0)
+CombatWarriors.Size = UDim2.new(0, 105, 0, 37)
+CombatWarriors.Font = Enum.Font.SourceSans
+CombatWarriors.Text = "Combat Warriors"
+CombatWarriors.TextColor3 = Color3.fromRGB(255, 255, 255)
+CombatWarriors.TextSize = 14.000
+
+UICorner_7.Parent = CombatWarriors
+
+SwagMode.Name = "SwagMode"
+SwagMode.Parent = Scripts
+SwagMode.BackgroundColor3 = Color3.fromRGB(33, 33, 33)
+SwagMode.Position = UDim2.new(0.0179028139, 0, 0.607594967, 0)
+SwagMode.Size = UDim2.new(0, 105, 0, 37)
+SwagMode.Font = Enum.Font.SourceSans
+SwagMode.Text = "Swag Mode"
+SwagMode.TextColor3 = Color3.fromRGB(255, 255, 255)
+SwagMode.TextSize = 14.000
+
+UICorner_8.Parent = SwagMode
+
+Executor.Name = "Executor"
+Executor.Parent = Main
+Executor.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
+Executor.BorderColor3 = Color3.fromRGB(14, 14, 14)
+Executor.Position = UDim2.new(0.134955749, 0, 0, 0)
+Executor.Size = UDim2.new(0, 391, 0, 237)
+Executor.Visible = false
+
+UICorner_9.Parent = Executor
+
+exec.Name = "exec"
+exec.Parent = Executor
+exec.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
+exec.BorderColor3 = Color3.fromRGB(22, 22, 22)
+exec.Position = UDim2.new(0, 0, 0.839662433, 0)
+exec.Size = UDim2.new(0, 38, 0, 30)
+exec.Image = "http://www.roblox.com/asset/?id=8215093320"
+
+UICorner_10.Parent = exec
+
+clear.Name = "clear"
+clear.Parent = Executor
+clear.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
+clear.BorderColor3 = Color3.fromRGB(22, 22, 22)
+clear.Position = UDim2.new(0.12531969, 0, 0.839662433, 0)
+clear.Size = UDim2.new(0, 38, 0, 30)
+clear.Image = "http://www.roblox.com/asset/?id=10190648035"
+
+UICorner_11.Parent = clear
+
+ScrollingFrame.Parent = Executor
 ScrollingFrame.Active = true
-ScrollingFrame.BackgroundColor3 = Color3.fromRGB(14, 14, 14)
-ScrollingFrame.BorderColor3 = Color3.fromRGB(14, 14, 14)
-ScrollingFrame.Position = UDim2.new(0.0163754895, 0, 0.103571452, 0)
-ScrollingFrame.Size = UDim2.new(0, 661, 0, 211)
+ScrollingFrame.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
+ScrollingFrame.BorderColor3 = Color3.fromRGB(22, 22, 22)
+ScrollingFrame.Position = UDim2.new(0, 0, 0.0337552726, 0)
+ScrollingFrame.Size = UDim2.new(0, 385, 0, 191)
 ScrollingFrame.CanvasSize = UDim2.new(10, 0, 10, 0)
-ScrollingFrame.HorizontalScrollBarInset = Enum.ScrollBarInset.Always
-ScrollingFrame.VerticalScrollBarInset = Enum.ScrollBarInset.Always
 
 Source.Name = "Source"
 Source.Parent = ScrollingFrame
-Source.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
-Source.BorderColor3 = Color3.fromRGB(22, 22, 22)
-Source.Size = UDim2.new(10, 0, 2, 0)
+Source.BackgroundColor3 = Color3.fromRGB(33, 33, 33)
+Source.Position = UDim2.new(0.000255754479, 0, 0, 0)
+Source.Size = UDim2.new(10, 0, 10, 0)
 Source.ClearTextOnFocus = false
-Source.Font = Enum.Font.Roboto
-Source.MultiLine = true
-Source.PlaceholderColor3 = Color3.fromRGB(255, 255, 255)
-Source.PlaceholderText = "--Insert Scripts Here"
+Source.Font = Enum.Font.SourceSans
+Source.PlaceholderColor3 = Color3.fromRGB(178, 178, 178)
+Source.PlaceholderText = "print(\"hello\")"
 Source.Text = ""
 Source.TextColor3 = Color3.fromRGB(255, 255, 255)
-Source.TextSize = 17.000
+Source.TextSize = 14.000
+Source.TextWrapped = true
 Source.TextXAlignment = Enum.TextXAlignment.Left
 Source.TextYAlignment = Enum.TextYAlignment.Top
 
-UICorner.Parent = Source
+UICorner_12.Parent = Source
 
-UICorner_2.Parent = ScrollingFrame
+UICorner_13.Parent = ScrollingFrame
 
-clear.Name = "clear"
-clear.Parent = Main
-clear.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
-clear.BorderColor3 = Color3.fromRGB(14, 14, 14)
-clear.Position = UDim2.new(0, 110, 0, 243)
-clear.Size = UDim2.new(0, 110, 0, 31)
-clear.Font = Enum.Font.Roboto
-clear.Text = "Clear"
-clear.TextColor3 = Color3.fromRGB(255, 255, 255)
-clear.TextSize = 25.000
-clear.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-clear.TextWrapped = true
+Home.Name = "Home"
+Home.Parent = Main
+Home.BackgroundColor3 = Color3.fromRGB(14, 14, 14)
+Home.BorderColor3 = Color3.fromRGB(14, 14, 14)
+Home.Position = UDim2.new(0, 0, 0.481012672, 0)
+Home.Size = UDim2.new(0, 61, 0, 58)
+Home.Image = "http://www.roblox.com/asset/?id=4034483344"
 
-UICorner_3.Parent = clear
+UICorner_14.Parent = Home
 
-exec.Name = "exec"
-exec.Parent = Main
-exec.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
-exec.BorderColor3 = Color3.fromRGB(14, 14, 14)
-exec.Position = UDim2.new(0, 8, 0, 243)
-exec.Size = UDim2.new(0, 93, 0, 31)
-exec.Font = Enum.Font.Roboto
-exec.Text = "Execute"
-exec.TextColor3 = Color3.fromRGB(255, 255, 255)
-exec.TextSize = 25.000
-exec.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-exec.TextWrapped = true
+HomeTab.Name = "HomeTab"
+HomeTab.Parent = Main
+HomeTab.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
+HomeTab.BorderColor3 = Color3.fromRGB(22, 22, 22)
+HomeTab.Position = UDim2.new(0.134955749, 0, 0, 0)
+HomeTab.Size = UDim2.new(0, 391, 0, 237)
+HomeTab.Visible = false
 
-UICorner_4.Parent = exec
+UICorner_15.Parent = HomeTab
 
-TextLabel.Parent = Main
-TextLabel.BackgroundColor3 = Color3.fromRGB(14, 14, 14)
-TextLabel.BorderColor3 = Color3.fromRGB(14, 14, 14)
-TextLabel.Position = UDim2.new(0, 8, 0, 7)
-TextLabel.Size = UDim2.new(0, 102, 0, 22)
-TextLabel.Font = Enum.Font.SourceSans
-TextLabel.Text = "Splice Internal"
-TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel.TextScaled = true
-TextLabel.TextSize = 14.000
-TextLabel.TextWrapped = true
+Title.Name = "Title"
+Title.Parent = HomeTab
+Title.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
+Title.BorderColor3 = Color3.fromRGB(22, 22, 22)
+Title.Position = UDim2.new(0.207161129, 0, 0.0253164563, 0)
+Title.Size = UDim2.new(0, 200, 0, 32)
+Title.Font = Enum.Font.SourceSans
+Title.Text = "Splice Internal UI"
+Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title.TextSize = 23.000
+Title.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
 
-HideText.Name = "HideText"
-HideText.Parent = Main
-HideText.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
-HideText.BorderColor3 = Color3.fromRGB(14, 14, 14)
-HideText.Position = UDim2.new(0, 228, 0, 243)
-HideText.Size = UDim2.new(0, 110, 0, 31)
-HideText.Font = Enum.Font.Roboto
-HideText.Text = "Hide Text"
-HideText.TextColor3 = Color3.fromRGB(255, 255, 255)
-HideText.TextSize = 25.000
-HideText.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-HideText.TextWrapped = true
+TextButton.Parent = HomeTab
+TextButton.BackgroundColor3 = Color3.fromRGB(33, 33, 33)
+TextButton.BorderColor3 = Color3.fromRGB(33, 33, 33)
+TextButton.Position = UDim2.new(0.207161129, 0, 0.443037987, 0)
+TextButton.Size = UDim2.new(0, 200, 0, 38)
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = "Discord"
+TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.TextSize = 14.000
+TextButton.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
 
-UICorner_5.Parent = HideText
-
-UICorner_6.Parent = Main
+UICorner_16.Parent = TextButton
 
 -- Scripts:
 
-local function XGQMJB_fake_script() -- clear.Script 
-	local script = Instance.new('Script', clear)
+local function MPEP_fake_script() -- ScriptHub.LocalScript 
+	local script = Instance.new('LocalScript', ScriptHub)
 
-	clear.MouseButton1Click:Connect(function()
-		Source.Text = "--Cleared"
-		wait(2)
-		Source.Text = ""
+	script.Parent.MouseButton1Down:Connect(function()
+		script.Parent.Parent.Executor.Visible = false
+		script.Parent.Parent.Scripts.Visible = true
+		script.Parent.Parent.HomeTab.Visible = false
 	end)
 end
-coroutine.wrap(XGQMJB_fake_script)()
-local function XDPMX_fake_script() -- exec.Script 
+coroutine.wrap(MPEP_fake_script)()
+local function HETZS_fake_script() -- ExecutorTab.LocalScript 
+	local script = Instance.new('LocalScript', ExecutorTab)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		script.Parent.Parent.Executor.Visible = true
+		script.Parent.Parent.Scripts.Visible = false
+		script.Parent.Parent.HomeTab.Visible = false
+	end)
+end
+coroutine.wrap(HETZS_fake_script)()
+local function RIUJM_fake_script() -- Void.LocalScript 
+	local script = Instance.new('LocalScript', Void)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		script.Parent.Parent.Parent.Executor.ScrollingFrame.Source.Text = 'loadstring(game:HttpGet("https://raw.githubusercontent.com/CoffeeStevia/Void/main/Beta%204"))()'
+		script.Parent.Text = "Check Executor Tab"
+		wait(5)
+		script.Parent.Text = "Void Hub"
+	end)
+	
+end
+coroutine.wrap(RIUJM_fake_script)()
+local function TGXCDJ_fake_script() -- DarkHub.LocalScript 
+	local script = Instance.new('LocalScript', DarkHub)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		script.Parent.Parent.Parent.Executor.ScrollingFrame.Source.Text = 'loadstring(game:HttpGet("http://darkhub.xyz/remote-script.lua", true))()'
+		script.Parent.Text = "Check Executor Tab"
+		wait(5)
+		script.Parent.Text = "Dark Hub"
+	end)
+end
+coroutine.wrap(TGXCDJ_fake_script)()
+local function GAGB_fake_script() -- CombatWarriors.LocalScript 
+	local script = Instance.new('LocalScript', CombatWarriors)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		script.Parent.Parent.Parent.Executor.ScrollingFrame.Source.Text = 'loadstring(game:HttpGet("https://projecthook.xyz/scripts/free.lua"))()'
+		script.Parent.Text = "Check Executor Tab"
+		wait(5)
+		script.Parent.Text = "Combat Warriors"
+	end)
+end
+coroutine.wrap(GAGB_fake_script)()
+local function SPOL_fake_script() -- SwagMode.LocalScript 
+	local script = Instance.new('LocalScript', SwagMode)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		script.Parent.Parent.Parent.Executor.ScrollingFrame.Source.Text = "loadstring(game:HttpGet('https://raw.githubusercontent.com/lerkermer/lua-projects/master/SwagModeV002'))()"
+		script.Parent.Text = "Check Executor Tab"
+		wait(5)
+		script.Parent.Text = "Swag Mode"
+	end)
+end
+coroutine.wrap(SPOL_fake_script)()
+local function EPKBAV_fake_script() -- exec.Script 
 	local script = Instance.new('Script', exec)
 
 	exec.MouseButton1Click:Connect(function()
 		assert(loadstring(Source.Text))()
 	end)
 end
-coroutine.wrap(XDPMX_fake_script)()
-local function UMRKQH_fake_script() -- Main.LocalScript 
+coroutine.wrap(EPKBAV_fake_script)()
+local function FITCI_fake_script() -- clear.Script 
+	local script = Instance.new('Script', clear)
+
+	clear.MouseButton1Click:Connect(function()
+		Source.Text = ""
+	end)
+end
+coroutine.wrap(FITCI_fake_script)()
+local function BKKBSNU_fake_script() -- Home.LocalScript 
+	local script = Instance.new('LocalScript', Home)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		script.Parent.Parent.Executor.Visible = false
+		script.Parent.Parent.Scripts.Visible = false
+		script.Parent.Parent.HomeTab.Visible = true
+	end)
+end
+coroutine.wrap(BKKBSNU_fake_script)()
+local function RNOPDOE_fake_script() -- TextButton.LocalScript 
+	local script = Instance.new('LocalScript', TextButton)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		local NotificationBindable = Instance.new("BindableFunction")
+		NotificationBindable.OnInvoke = callback
+		--
+		game.StarterGui:SetCore("SendNotification",  {
+			Title = "Discord";
+			Text = "Copied To Clipboard";
+			Icon = "";
+			Duration = 10;
+			Button1 = "Ok";
+			Callback = NotificationBindable;
+		})
+	
+		setclipboard("https://discord.gg/dACJYTDU27")
+	end)
+end
+coroutine.wrap(RNOPDOE_fake_script)()
+local function CDDHNEA_fake_script() -- Main.Dragify 
 	local script = Instance.new('LocalScript', Main)
 
-	
 	local UIS = game:GetService("UserInputService")
 	function dragify(Frame)
 		dragToggle = nil
@@ -176,100 +386,28 @@ local function UMRKQH_fake_script() -- Main.LocalScript
 	dragify(script.Parent)
 	
 end
-coroutine.wrap(UMRKQH_fake_script)()
-local function LWLCDO_fake_script() -- HideText.Script 
-	local script = Instance.new('Script', HideText)
+coroutine.wrap(CDDHNEA_fake_script)()
+local function BDSNIGS_fake_script() -- Main.KeyBind 
+	local script = Instance.new('LocalScript', Main)
 
-	local hidden = false
-	script.Parent.MouseButton1Click:Connect(function()
-		if hidden == false then
+	local Mainframe = script.Parent.Parent.Main
+	local Opened = false
 	
+	local PositionClosed = UDim2.new(0.225, 0,0.266, 0)
+	local PositionOpened = UDim2.new(-0.551, 0,0.266, 0)
 	
-			-- Change script.Parent.Parent.Frame1.TextBox to wherever your textbox is,
-			-- It could be script.Parent.Mainframe.Codebox.TextBox
-			-- Change it to wherever your textbox is...
-			-- Don't forget to subscribe to scrambles! :D
+	local UserInputService = game:GetService("UserInputService")
 	
-			script.Parent.Parent.ScriptBox.Transparency = 0.1
-			wait()
-			script.Parent.Parent.ScriptBox.Transparency = 0.2
-			wait()
-			script.Parent.Parent.ScriptBox.Transparency = 0.3
-			wait()
-			script.Parent.Parent.ScriptBox.Transparency = 0.4
-			wait()
-			script.Parent.Parent.ScriptBox.Transparency = 0.5
-			wait()
-			script.Parent.Parent.ScriptBox.Transparency = 0.6
-			wait()
-			script.Parent.Parent.ScriptBox.Transparency = 0.7
-			wait()
-			script.Parent.Parent.ScriptBox.Transparency = 0.8
-			wait()
-			script.Parent.Parent.ScriptBox.Transparency = 0.9
-			wait()
-			script.Parent.Parent.ScriptBox.Transparency = 1
-			wait()
-			hidden = true
-		else
-			hidden = false
-			script.Parent.Parent.ScriptBox.Transparency = 1
-			wait()
-			script.Parent.Parent.ScriptBox.Transparency = 0.9
-			wait()
-			script.Parent.Parent.ScriptBox.Transparency = 0.8
-			wait()
-			script.Parent.Parent.ScriptBox.Transparency = 0.7
-			wait()
-			script.Parent.Parent.ScriptBox.Transparency = 0.6
-			wait()
-			script.Parent.Parent.ScriptBox.Transparency = 0.5
-			wait()
-			script.Parent.Parent.ScriptBox.Transparency = 0.4
-			wait()
-			script.Parent.Parent.ScriptBox.Transparency = 0.3
-			wait()
-			script.Parent.Parent.ScriptBox.Transparency = 0.2
-			wait()
-			script.Parent.Parent.ScriptBox.Transparency = 0.1
-			wait()
-			script.Parent.Parent.ScriptBox.Transparency = 0
-			wait()
-		end	
-	end)
-	
-end
-coroutine.wrap(LWLCDO_fake_script)()
-local function BSTOHI_fake_script() -- ScreenGui.Script 
-	local script = Instance.new('Script', ScreenGui)
-
-	local Plr = game.Players.LocalPlayer
-	
-	Plr:GetMouse().KeyDown:Connect(function(K)
-		if K == "=" then
-			Main.Visible = true
+	UserInputService.InputBegan:Connect(function(KeyCode)
+		if KeyCode.KeyCode == Enum.KeyCode.Insert then 
+			if Opened then
+				Mainframe:TweenPosition((PositionClosed), "InOut" , "Sine")
+				Opened = false
+			else
+				Mainframe:TweenPosition((PositionOpened), "InOut" , "Sine")
+				Opened = true
+			end
 		end
 	end)
-	
-	local Plr = game.Players.LocalPlayer
-	
-	Plr:GetMouse().KeyDown:Connect(function(K)
-		if K == "-" then
-			Main.Visible = false
-		end
-	end)
-	
 end
-
-local NotificationBindable = Instance.new("BindableFunction")
-NotificationBindable.OnInvoke = callback
---
-game.StarterGui:SetCore("SendNotification",  {
- Title = "Credits: Coffee#1306 UI/Code";
- Text = "Other: fishy#4864 - some code";
- Icon = "";
- Duration = 10;
- Button1 = "Ok";
- Callback = NotificationBindable;
-})
-coroutine.wrap(BSTOHI_fake_script)()
+coroutine.wrap(BDSNIGS_fake_script)()
